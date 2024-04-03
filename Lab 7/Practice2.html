@@ -1,0 +1,35 @@
+
+<html>
+
+<head>
+    <h2>Fun color changer!</h2>
+</head>
+
+
+<style>
+    #paragraph {
+        border-style: solid;
+        border-width: 5px;
+    }
+</style>
+
+<body>
+    <div id="paragraph">
+
+
+        Wow change me!.
+
+    </div>
+
+    <script type="text/javascript" src="functions.js"></script>
+    <p style="color: rgb(195, 16, 16)">Border R(0-255): <input type="text" id="border_R" value=""> </p>
+    <p style="color: rgb(4, 79, 25)">Border G(0-255): <input type="text" id="border_G" value=""> </p>
+    <p style="color: rgb(85, 16, 195)">Border B(0-255): <input type="text" id="border_B" value=""> </p>
+    Border Width: <input type="text" id="border_width" value=""> <br>
+    <p style="color: rgb(195, 16, 16)">Background R(0-255): <input type="text" id="bg_R" value=""> </p>
+    <p style="color: rgb(16, 195, 94)">Background G(0-255): <input type="text" id="bg_G" value=""> </p>
+    <p style="color: rgb(16, 117, 195)">Background B(0-255): <input type="text" id="bg_B" value=""> </p>
+    <button onclick="alert_paragraph_color()">Change the color!</button> <br>
+</body>
+
+</html>
