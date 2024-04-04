@@ -1,35 +1,49 @@
-
+<!DOCTYPE html>
 <html>
 
 <head>
-    <h2>Fun color changer!</h2>
+    <title>EECS 348 Lab Seven Part Two</title>
 </head>
 
-
-<style>
-    #paragraph {
-        border-style: solid;
-        border-width: 5px;
-    }
-</style>
-
 <body>
+    <h1>Change me hehe!</h1>
+
+    <style>
+        #paragraph {
+            border-style: solid;
+            border-width: 5px;
+        }
+    </style>
+
     <div id="paragraph">
-
-
-        Wow change me!.
-
+        Paragraph to be altered.
     </div>
 
-    <script type="text/javascript" src="functions.js"></script>
-    <p style="color: rgb(195, 16, 16)">Border R(0-255): <input type="text" id="border_R" value=""> </p>
-    <p style="color: rgb(4, 79, 25)">Border G(0-255): <input type="text" id="border_G" value=""> </p>
-    <p style="color: rgb(85, 16, 195)">Border B(0-255): <input type="text" id="border_B" value=""> </p>
+    Border R(0-255): <input type="text" id="border_R" value=""> <br>
+    Border G(0-255): <input type="text" id="border_G" value=""> <br>
+    Border B(0-255): <input type="text" id="border_B" value=""> <br>
     Border Width: <input type="text" id="border_width" value=""> <br>
-    <p style="color: rgb(195, 16, 16)">Background R(0-255): <input type="text" id="bg_R" value=""> </p>
-    <p style="color: rgb(16, 195, 94)">Background G(0-255): <input type="text" id="bg_G" value=""> </p>
-    <p style="color: rgb(16, 117, 195)">Background B(0-255): <input type="text" id="bg_B" value=""> </p>
-    <button onclick="alert_paragraph_color()">Change the color!</button> <br>
+    Background R(0-255): <input type="text" id="bg_R" value=""> <br>
+    Background G(0-255): <input type="text" id="bg_G" value=""> <br>
+    Background B(0-255): <input type="text" id="bg_B" value=""> <br>
+    <button onclick="changeParagraphColor()">Change the color!</button> <br>
+
+    <script>
+        function changeParagraphColor() {
+            var borderR = document.getElementById("border_R").value;
+            var borderG = document.getElementById("border_G").value;
+            var borderB = document.getElementById("border_B").value;
+            var borderWidth = document.getElementById("border_width").value;
+            var bgR = document.getElementById("bg_R").value;
+            var bgG = document.getElementById("bg_G").value;
+            var bgB = document.getElementById("bg_B").value;
+
+            var paragraph = document.getElementById("paragraph");
+            paragraph.style.borderColor = "rgb(" + borderR + "," + borderG + "," + borderB + ")";
+            paragraph.style.borderWidth = borderWidth + "px";
+            paragraph.style.backgroundColor = "rgb(" + bgR + "," + bgG + "," + bgB + ")";
+        }
+    </script>
 </body>
 
 </html>

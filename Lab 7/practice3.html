@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Checker!</title>
+    <style>
+        h1 {
+            color: rgb(195, 16, 16);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Password Checker!</h1>
+    <h2>First Password: <input type="text" id="pass1" value=""><br></h2>
+    <h2>Second Password: <input type="password" id="pass2" value=""><br></h2> 
+    <button onclick="validate()">Validate Your Passwords</button><br>
+
+    <script>
+        function validate() {
+            var pass1 = document.getElementById("pass1").value;
+            var pass2 = document.getElementById("pass2").value;
+
+            if (pass1.length < 8 || pass2.length < 8) {
+                alert("Passwords must be at least eight characters long.");
+            } else if (pass1 !== pass2) {
+                alert("Passwords do not match.");
+            } else {
+                alert("Passwords match!");
+            }
+        }
+    </script>
+</body>
+
+</html>
